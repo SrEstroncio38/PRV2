@@ -74,16 +74,21 @@
 
 			double[] rvec = new double[3]{0d, 0d, 0d};
 			double[] tvec = new double[3]{0d, 0d, 0d};
-			double[,] rotMat = new double[3, 3] {{0d, 0d, 0d}, {0d, 0d, 0d}, {0d, 0d, 0d}};
+            //double[,] rotMat = new double[3, 3] {{0d, 0d, 0d}, {0d, 0d, 0d}, {0d, 0d, 0d}};
+            Matrix4x4 rotMat = Matrix4x4.zero;
 
 
 			for (int i=0; i<ids.Length; i++) {
 
 				Cv2.SolvePnP(markerPoints, corners[i], cameraMatrix, distCoeffs, out rvec, out tvec, false, SolvePnPFlags.Iterative);
 
-//				CvAruco.DrawAxis(mat, cameraMatrix, distCoeffs, rvec, tvec, 1.0f);
-				Cv2.Rodrigues (rvec, out rotMat);
-				Matrix4x4 matrix = new Matrix4x4();
+                //CvAruco.DrawAxis(mat, cameraMatrix, distCoeffs, rvec, tvec, 1.0f);
+                float theta = (float)(Math.Sqrt(rvec[0] * rvec[0] + rvec[1] * rvec[1] + rvec[2] * rvec[2]) * 180 / Math.PI);
+                Vector3 axis = new Vector3((float)rvec[0], (float)rvec[1], (float)rvec[2]);
+                Quaternion rot = Quaternion.AngleAxis(theta, axis);
+                rotMat = Matrix4x4.TRS(new Vector3((float)tvec[0], (float)tvec[1], (float)tvec[2]), rot, new Vector3(1, 1, 1));
+                //Cv2.Rodrigues (rvec, out rotMat);
+                Matrix4x4 matrix = new Matrix4x4();
 				matrix.SetRow(0, new Vector4((float)rotMat[0, 0], (float)rotMat[0, 1], (float)rotMat[0, 2], (float)tvec[0]));
 				matrix.SetRow(1, new Vector4((float)rotMat[1, 0], (float)rotMat[1, 1], (float)rotMat[1, 2], (float)tvec[1]));
 				matrix.SetRow(2, new Vector4((float)rotMat[2, 0], (float)rotMat[2, 1], (float)rotMat[2, 2], (float)tvec[2]));
