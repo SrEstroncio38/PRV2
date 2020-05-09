@@ -15,6 +15,8 @@ namespace PaperPlaneTools.AR {
 
         public GameObject referenceObject;
 
+        public float positionMultiplier = 0.1f;
+
 		[Serializable]
 		public class MarkerObject
 		{
@@ -189,7 +191,7 @@ namespace PaperPlaneTools.AR {
 			Matrix4x4 matrixZ = Matrix4x4.TRS (Vector3.zero, Quaternion.identity, new Vector3 (1, 1, -1));
 			Matrix4x4 matrix = matrixY * transformMatrix * matrixZ;
 
-			gameObject.transform.localPosition = MatrixHelper.GetPosition (matrix);
+			gameObject.transform.localPosition = MatrixHelper.GetPosition (matrix) * positionMultiplier;
 			gameObject.transform.localRotation = MatrixHelper.GetQuaternion (matrix);
 			gameObject.transform.localScale = MatrixHelper.GetScale (matrix);
 		}
