@@ -24,6 +24,13 @@ public class PointerScript : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, maxRange))
         {
+
+            PointableObject target = hit.collider.GetComponent<PointableObject>();
+            if (target)
+            {
+                target.beingHit = true;
+            }
+
             endPos = hit.point;
             Debug.DrawLine(transform.position, hit.point, Color.red);
         }
