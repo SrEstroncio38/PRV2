@@ -60,11 +60,10 @@ namespace PaperPlaneTools.AR {
 
 		protected override void Awake() {
             #if PLATFORM_ANDROID
-            if (!Permission.HasUserAuthorizedPermission(Permission.Microphone) && !Permission.HasUserAuthorizedPermission(Permission.Camera))
-            {
+            if (!Permission.HasUserAuthorizedPermission(Permission.Microphone))
                 Permission.RequestUserPermission(Permission.Microphone);
+            if (!Permission.HasUserAuthorizedPermission(Permission.Camera))
                 Permission.RequestUserPermission(Permission.Camera);
-            }
             #endif
 
             int cameraIndex = -1;

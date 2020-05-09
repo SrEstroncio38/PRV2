@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using GoogleVR.PermissionsDemo;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 #if PLATFORM_ANDROID
@@ -7,15 +8,16 @@ using UnityEngine.Android;
 
 public class CameraTest : MonoBehaviour
 {
-    // Start is called before the first frame update
+    GameObject dialog = null;
+
     void Start()
     {
-    #if PLATFORM_ANDROID
-            if (!Permission.HasUserAuthorizedPermission(Permission.Microphone) && !Permission.HasUserAuthorizedPermission(Permission.Camera))
-            {
-                Permission.RequestUserPermission(Permission.Microphone);
-                Permission.RequestUserPermission(Permission.Camera);
+#if PLATFORM_ANDROID
+        if (!GvrPermissionsRequester.Instance.IsPermissionGranted("Camera"))
+        {
+            string[] permissions = {"Camera"};
+            GvrPermissionsRequester.Instance.RequestPermissions(permissions, null);
         }
-    #endif
+#endif
     }
 }
