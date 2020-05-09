@@ -12,6 +12,9 @@ namespace PaperPlaneTools.AR {
     #endif
 
     public class MainScript: WebCamera {
+
+        public GameObject referenceObject;
+
 		[Serializable]
 		public class MarkerObject
 		{
@@ -87,6 +90,7 @@ namespace PaperPlaneTools.AR {
             var img = Unity.TextureToMat(texture, Unity.TextureConversionParams.Default);
             ProcessFrame(img, img.Cols, img.Rows);
             output = Unity.MatToTexture(img, output);
+            UnityEngine.Object.Destroy( texture );
             return true;
         }
 
@@ -172,6 +176,7 @@ namespace PaperPlaneTools.AR {
 				MarkerOnScene markerOnScene = new MarkerOnScene() {
 					gameObject = gameObject
 				};
+                markerOnScene.gameObject.transform.SetParent(referenceObject.transform);
 				gameObjects.Add(markerOnScene);
 
 				Matrix4x4 transforMatrix = markerDetector.TransfromMatrixForIndex(markerIndex);
