@@ -1422,7 +1422,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 984691116}
-  - component: {fileID: 984691118}
   - component: {fileID: 984691117}
   m_Layer: 0
   m_Name: Player
@@ -1468,18 +1467,6 @@ MonoBehaviour:
   - markerId: 23
     markerPrefab: {fileID: 1991964641660649123, guid: 0aaedd92829b9cf48b9915e861caf4a7,
       type: 3}
---- !u!114 &984691118
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 984691115}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2101a7ee6277c4945b102341bf10314d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1296831045
 GameObject:
   m_ObjectHideFlags: 0
