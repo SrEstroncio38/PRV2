@@ -14,7 +14,7 @@ public class ButtonScript : MonoBehaviour
 
     private bool activated = false;
 
-    private float timer;
+    public float timer;
     
     void Start()
     {
@@ -23,7 +23,8 @@ public class ButtonScript : MonoBehaviour
 
         originalPos = transform.localPosition;
         newPos = originalPos + new Vector3(0.0f, -0.03f, 0.0f);
-        
+
+
     }
 
     void Update()
@@ -72,7 +73,7 @@ public class ButtonScript : MonoBehaviour
 
     }
 
-    public virtual void ActiveAction()
+    public void ActiveAction()
     {
         Debug.Log("Botón activado");
     }
