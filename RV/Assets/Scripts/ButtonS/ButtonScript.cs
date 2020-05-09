@@ -34,7 +34,7 @@ public class ButtonScript : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if (oneTimePress && timer > waitTime)
+        if (oneTimePress && timer > waitTime && activated)
         {
             TriggerDeactivation(false);
         }
