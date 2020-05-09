@@ -7,7 +7,11 @@ public class ButtonScript : MonoBehaviour
 
     public GameObject hand;
 
+    public bool oneTimePress = true;
+
     public float waitTime = 1.0f;
+
+    public List<ButtonScript> deactivatedButtons;
 
     private Vector3 originalPos;
     private Vector3 newPos;
@@ -29,6 +33,11 @@ public class ButtonScript : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
+
+        if (oneTimePress && timer > waitTime)
+        {
+            TriggerDeactivation(false);
+        }
     }
 
     private void OnCollisionStay(Collision collision)
@@ -51,17 +60,11 @@ public class ButtonScript : MonoBehaviour
             {
                 if (!activated)
                 {
-                    activated = true;
-                    transform.localPosition = newPos;
-                    timer = 0;
-                    ActiveAction();
+                    TriggerActivation();
                 }
-                else
+                else if (!oneTimePress)
                 {
-                    activated = false;
-                    transform.localPosition = originalPos;
-                    timer = 0;
-                    InactiveAction();
+                    TriggerDeactivation();
                 }
             }
 
@@ -72,12 +75,33 @@ public class ButtonScript : MonoBehaviour
 
     }
 
+    public void TriggerActivation()
+    {
+        activated = true;
+        transform.localPosition = newPos;
+        timer = 0;
+        foreach (ButtonScript b in deactivatedButtons)
+        {
+            b.TriggerDeactivation();
+        }
+        ActiveAction();
+    }
+
+    public void TriggerDeactivation(bool resetTimer = true)
+    {
+        activated = false;
+        transform.localPosition = originalPos;
+        if (resetTimer)
+            timer = 0;
+        InactiveAction();
+    }
+
     public virtual void ActiveAction()
     {
         Debug.Log("Botón activado");
     }
 
-    private void InactiveAction()
+    public virtual void InactiveAction()
     {
         Debug.Log("Botón desactivado");
     }
