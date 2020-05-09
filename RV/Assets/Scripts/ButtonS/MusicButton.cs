@@ -7,7 +7,11 @@ public class MusicButton : ButtonScript
     public RadioScript Radio;
     public bool next;
     public bool before;
-    
+
+    public void Start()
+    {
+ 
+    }
 
     public new void ActiveAction()
     {
@@ -17,8 +21,8 @@ public class MusicButton : ButtonScript
         }
         if (before)
         {
-
+            Radio.Before();
         }
-        Debug.Log("Botón activado");
+        Debug.Log("Botón music activado");
     }
 }
