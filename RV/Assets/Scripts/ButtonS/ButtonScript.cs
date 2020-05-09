@@ -72,7 +72,7 @@ public class ButtonScript : MonoBehaviour
 
     }
 
-    private void ActiveAction()
+    public virtual void ActiveAction()
     {
         Debug.Log("Botón activado");
     }
