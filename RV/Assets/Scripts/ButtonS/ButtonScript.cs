@@ -13,12 +13,12 @@ public class ButtonScript : MonoBehaviour
 
     public List<ButtonScript> deactivatedButtons;
 
-    private Vector3 originalPos;
-    private Vector3 newPos;
+    protected Vector3 originalPos;
+    protected Vector3 newPos;
 
-    private bool activated = false;
+    protected bool activated = false;
 
-    private float timer;
+    public float timer;
     
     void Start()
     {
@@ -27,7 +27,8 @@ public class ButtonScript : MonoBehaviour
 
         originalPos = transform.localPosition;
         newPos = originalPos + new Vector3(0.0f, -0.03f, 0.0f);
-        
+
+
     }
 
     void Update()

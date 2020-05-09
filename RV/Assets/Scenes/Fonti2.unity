@@ -481,7 +481,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 730849505}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.317, y: 0.132, z: 0.252}
+  m_LocalPosition: {x: 0.317, y: 0.151, z: 0.252}
   m_LocalScale: {x: 0.10201, y: 0.068532966, z: 0.15447807}
   m_Children: []
   m_Father: {fileID: 685569414}
@@ -496,11 +496,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 730849505}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1065b8b401136cf4caab5bacb9621f6e, type: 3}
+  m_Script: {fileID: 11500000, guid: 390b5c8cf600a5c40876ecf38786805e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hand: {fileID: 3150694430660200761, guid: 51b580af3858e8143abfecb8cb0bc417, type: 3}
+  oneTimePress: 1
   waitTime: 1
+  deactivatedButtons: []
+  timer: 0
+  Radio: {fileID: 1972179016}
+  next: 0
+  before: 1
 --- !u!65 &730849508
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -954,7 +960,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hand: {fileID: 3150694430660200761, guid: 51b580af3858e8143abfecb8cb0bc417, type: 3}
+  oneTimePress: 1
   waitTime: 1
+  deactivatedButtons: []
+  timer: 0
 --- !u!64 &903558855
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1804,11 +1813,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1305763844}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1065b8b401136cf4caab5bacb9621f6e, type: 3}
+  m_Script: {fileID: 11500000, guid: 390b5c8cf600a5c40876ecf38786805e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hand: {fileID: 3150694430660200761, guid: 51b580af3858e8143abfecb8cb0bc417, type: 3}
+  oneTimePress: 1
   waitTime: 1
+  deactivatedButtons: []
+  timer: 0
+  Radio: {fileID: 0}
+  next: 0
+  before: 0
 --- !u!64 &1305763847
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1949,7 +1964,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hand: {fileID: 3150694430660200761, guid: 51b580af3858e8143abfecb8cb0bc417, type: 3}
+  oneTimePress: 1
   waitTime: 1
+  deactivatedButtons: []
+  timer: 0
 --- !u!64 &1535134827
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2058,7 +2076,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hand: {fileID: 3150694430660200761, guid: 51b580af3858e8143abfecb8cb0bc417, type: 3}
+  oneTimePress: 1
   waitTime: 1
+  deactivatedButtons: []
+  timer: 0
 --- !u!64 &1784814959
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2335,7 +2356,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1899868881}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.317, y: 0.132, z: 0.737}
+  m_LocalPosition: {x: 0.317, y: 0.151, z: 0.737}
   m_LocalScale: {x: 0.10201, y: 0.068532966, z: 0.15447807}
   m_Children: []
   m_Father: {fileID: 685569414}
@@ -2350,11 +2371,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1899868881}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1065b8b401136cf4caab5bacb9621f6e, type: 3}
+  m_Script: {fileID: 11500000, guid: 390b5c8cf600a5c40876ecf38786805e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hand: {fileID: 3150694430660200761, guid: 51b580af3858e8143abfecb8cb0bc417, type: 3}
+  oneTimePress: 1
   waitTime: 1
+  deactivatedButtons: []
+  timer: 0
+  Radio: {fileID: 1972179016}
+  next: 1
+  before: 0
 --- !u!65 &1899868884
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2462,7 +2489,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hand: {fileID: 3150694430660200761, guid: 51b580af3858e8143abfecb8cb0bc417, type: 3}
+  oneTimePress: 1
   waitTime: 1
+  deactivatedButtons: []
+  timer: 0
 --- !u!64 &1946838142
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2533,8 +2563,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1972179013}
+  - component: {fileID: 1972179015}
+  - component: {fileID: 1972179014}
+  - component: {fileID: 1972179016}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Radio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2548,12 +2581,147 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1972179012}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.293, y: 0.135, z: 0.515}
+  m_LocalPosition: {x: 0.293, y: 0.135, z: 0.494}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 685569414}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1972179014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1972179012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef5e1719799ca4f9b9f5db81449517ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bypassRoomEffects: 0
+  directivityAlpha: 0
+  directivitySharpness: 1
+  listenerDirectivityAlpha: 0
+  listenerDirectivitySharpness: 1
+  gainDb: 0
+  nearFieldEffectEnabled: 0
+  nearFieldEffectGain: 1
+  occlusionEnabled: 0
+  occlusionIntensity: 1
+  quality: 2
+--- !u!82 &1972179015
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1972179012}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 248799cb4acba48f7b3ee842a80f788c,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: 58ac906c32bf02a45b906e13af59eea3, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 1
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 1
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &1972179016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1972179012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d406a9a2b47edf41b0335bcd1d7d414, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Songs:
+  - {fileID: 8300000, guid: 58ac906c32bf02a45b906e13af59eea3, type: 3}
+  - {fileID: 8300000, guid: 93585f3a273db184393e553898e1aa59, type: 3}
 --- !u!1 &2016861544
 GameObject:
   m_ObjectHideFlags: 0
@@ -2662,7 +2830,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hand: {fileID: 3150694430660200761, guid: 51b580af3858e8143abfecb8cb0bc417, type: 3}
+  oneTimePress: 1
   waitTime: 1
+  deactivatedButtons: []
+  timer: 0
 --- !u!1 &2096379888
 GameObject:
   m_ObjectHideFlags: 0
