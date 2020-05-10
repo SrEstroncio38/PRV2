@@ -18,7 +18,7 @@ public class ButtonScript : MonoBehaviour
 
     protected bool activated = false;
 
-    public float timer;
+    protected float timer;
     
     void Start()
     {
@@ -104,12 +104,12 @@ public class ButtonScript : MonoBehaviour
 
     public virtual void ActiveAction()
     {
-        Debug.Log("Botón activado");
+        //Debug.Log("Botón activado");
     }
 
     public virtual void InactiveAction()
     {
-        Debug.Log("Botón desactivado");
+        //Debug.Log("Botón desactivado");
     }
 
 }

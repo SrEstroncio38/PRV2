@@ -231,7 +231,6 @@ MonoBehaviour:
   oneTimePress: 1
   waitTime: 1
   deactivatedButtons: []
-  timer: 0
   Radio: {fileID: 433810496}
   next: 1
   before: 0
@@ -1166,14 +1165,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 508868800}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1065b8b401136cf4caab5bacb9621f6e, type: 3}
+  m_Script: {fileID: 11500000, guid: cfbb0acba8a4124499e7760583557349, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hand: {fileID: 3150694430660200761, guid: 51b580af3858e8143abfecb8cb0bc417, type: 3}
   oneTimePress: 1
   waitTime: 1
   deactivatedButtons: []
-  timer: 0
+  vagoneta: {fileID: 250010230}
+  dir: 1
 --- !u!64 &508868803
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1706,9 +1706,11 @@ MonoBehaviour:
   positionMultiplier: 0.1
   markers:
   - markerId: 5
-    markerPrefab: {fileID: 192324, guid: 2cd155db0d1184f53b38a39be9667f6f, type: 3}
+    markerPrefab: {fileID: 3150694430660200761, guid: 51b580af3858e8143abfecb8cb0bc417,
+      type: 3}
   - markerId: 23
-    markerPrefab: {fileID: 127862, guid: 0677871dc074142beb6deba55e316d31, type: 3}
+    markerPrefab: {fileID: 1991964641660649123, guid: 0aaedd92829b9cf48b9915e861caf4a7,
+      type: 3}
 --- !u!1 &806028411
 GameObject:
   m_ObjectHideFlags: 0
@@ -2142,14 +2144,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 910515332}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1065b8b401136cf4caab5bacb9621f6e, type: 3}
+  m_Script: {fileID: 11500000, guid: cfbb0acba8a4124499e7760583557349, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hand: {fileID: 3150694430660200761, guid: 51b580af3858e8143abfecb8cb0bc417, type: 3}
   oneTimePress: 1
   waitTime: 1
   deactivatedButtons: []
-  timer: 0
+  vagoneta: {fileID: 250010230}
+  dir: 0
 --- !u!64 &910515335
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2806,7 +2809,6 @@ MonoBehaviour:
   oneTimePress: 1
   waitTime: 1
   deactivatedButtons: []
-  timer: 0
   Radio: {fileID: 433810496}
   next: 0
   before: 1
@@ -3165,14 +3167,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1161767760}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1065b8b401136cf4caab5bacb9621f6e, type: 3}
+  m_Script: {fileID: 11500000, guid: cfbb0acba8a4124499e7760583557349, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hand: {fileID: 3150694430660200761, guid: 51b580af3858e8143abfecb8cb0bc417, type: 3}
-  oneTimePress: 1
+  oneTimePress: 0
   waitTime: 1
-  deactivatedButtons: []
-  timer: 0
+  deactivatedButtons:
+  - {fileID: 1440042148}
+  vagoneta: {fileID: 250010230}
+  dir: 3
 --- !u!64 &1161767763
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3650,7 +3654,6 @@ MonoBehaviour:
   oneTimePress: 1
   waitTime: 1
   deactivatedButtons: []
-  timer: 0
 --- !u!64 &1294618729
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4067,14 +4070,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1440042146}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1065b8b401136cf4caab5bacb9621f6e, type: 3}
+  m_Script: {fileID: 11500000, guid: cfbb0acba8a4124499e7760583557349, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hand: {fileID: 3150694430660200761, guid: 51b580af3858e8143abfecb8cb0bc417, type: 3}
-  oneTimePress: 1
+  oneTimePress: 0
   waitTime: 1
-  deactivatedButtons: []
-  timer: 0
+  deactivatedButtons:
+  - {fileID: 1161767762}
+  vagoneta: {fileID: 250010230}
+  dir: 2
 --- !u!64 &1440042149
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4216,7 +4221,6 @@ MonoBehaviour:
   oneTimePress: 1
   waitTime: 1
   deactivatedButtons: []
-  timer: 0
   Radio: {fileID: 433810496}
   next: 0
   before: 0

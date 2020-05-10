@@ -34,43 +34,27 @@ public class followPath : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        /*
         if (Input.GetKeyDown("w"))
         {
-            moveSpeed += 1;
-            if (moveSpeed > 3) moveSpeed = 3;
+            PressForward();
         }
 
         if (Input.GetKeyDown("s"))
         {
-            moveSpeed -= 1;
-            if (moveSpeed < -2) moveSpeed = -2;
+            PressBackward();
         }
 
         if (Input.GetKeyDown("a"))
         {
-            if (goLeft == true)
-            {
-                goLeft = false;
-            }
-            else
-            {
-                goLeft = true;
-            }
-            goRight = false;
+            PressLeft();
         }
 
         if (Input.GetKeyDown("d"))
         {
-            if (goRight == true)
-            {
-                goRight = false;
-            }
-            else
-            {
-                goRight = true;
-            }
-            goLeft = false;
+            PressRight();
         }
+        */
 
         if (moveSpeed > 0)
         {
@@ -81,6 +65,44 @@ public class followPath : MonoBehaviour
             MoveBack();
         }
 
+    }
+
+    public void PressForward()
+    {
+        moveSpeed += 1;
+        if (moveSpeed > 3) moveSpeed = 3;
+    }
+
+    public void PressBackward()
+    {
+        moveSpeed -= 1;
+        if (moveSpeed < -2) moveSpeed = -2;
+    }
+
+    public void PressLeft()
+    {
+        if (goLeft == true)
+        {
+            goLeft = false;
+        }
+        else
+        {
+            goLeft = true;
+        }
+        goRight = false;
+    }
+
+    public void PressRight()
+    {
+        if (goRight == true)
+        {
+            goRight = false;
+        }
+        else
+        {
+            goRight = true;
+        }
+        goLeft = false;
     }
 
     private void Move()
