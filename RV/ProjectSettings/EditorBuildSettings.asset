@@ -6,21 +6,24 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/Scenes/Fonti2Fix.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: Assets/Scenes/Fonti.unity
     guid: 5d76deecd0d56f64b95ecf7cee701d1a
   - enabled: 0
-    path: Assets/Scenes/EstaRota.unity
-    guid: 99c4034cf0da37f4888e1de754a30bbd
-  - enabled: 1
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
     path: Assets/Scenes/Fonti22Fix.unity
     guid: 4487e0643389fbc4e90c39ac15454b92
   - enabled: 0
-    path: Assets/Scenes/Fonti2Fix.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: Assets/Scenes/AxelScene.unity
     guid: 19ded0e7569bc484c9589d3f0e08b0c6
+  - enabled: 1
+    path: Assets/Scenes/FontiReverb.unity
+    guid: 8cddee59390cb19488696e3065ec7ba1
   m_configObjects: {}

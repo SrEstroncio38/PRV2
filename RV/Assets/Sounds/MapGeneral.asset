@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2b0f2e7fc23e46c78f6dc1a54c32708, type: 3}
+  m_Name: MapGeneral
+  m_EditorClassIdentifier: 
+  surfaceMaterialFromGuid:
+    guids:
+    - 0000000000000000f000000000000000
+    - 81753d558f2f30a448261c5389d6cf7c
+    - d3e2fd9aece6846b085748314a6b39a4
+    - 46e3c8d0e49854f398883a454efa059e
+    - 7500b350f95fa794b912ebdfafcf2333
+    - c0d04f77dcf028a42b7a55a07699cc68
+    - 2cb09e52bed353a47b50ab17a6f492b0
+    - 24d188ae8bdd0fd40b2806abd5a8c037
+    - 7ed72c4ee0828ef4691e7f8025284d02
+    - 1f8a9989099236a4ca63a2bf84ca4204
+    - 533b07e79c682ae4ea690b4181f8951e
+    - 484db7d84686d09408d433703fa31db1
+    - 41bee9cb9b1c959449b5d936fd3536f7
+    - 209cdd5fd662f3848aa75f73ff844424
+    - dfd0b669065078740874ca282c7d8215
+    - e80759fcebd2e824a856c8ef0393a427
+    - 7f55d07cc5a428e4285bf09582d2e998
+    - 117ca7d0f7859b742b906da44949cf09
+    - 1b7ed8eb6a35dc546bf93d33a9becab5
+    - b5c457f02c071614eb6b31350e689fb3
+    - 2419aacd9453f3a4381689e9bc14a4ec
+    - 1330fa310fcdbee4d87f7da64cc71413
+    surfaceMaterials: 000000000000000000000000000000000d0000000a00000002000000160000001600000008000000090000000a0000000100000016000000160000001600000014000000020000000200000002000000160000000e000000
