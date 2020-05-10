@@ -6,8 +6,14 @@ public class ClaxonButton : ButtonScript
 {
     public AudioSource claxon;
 
+    public void Awake()
+    {
+        claxon.mute = true;
+    }
+
     public override void ActiveAction()
-    { 
+    {
+        claxon.mute = false;
         claxon.Play();
     }
 }
