@@ -7,6 +7,11 @@ public class ClaxonButton : ButtonScript
 
     public void Start()
     {
+        timer = waitTime;
+
+        originalPos = transform.localPosition;
+        newPos = originalPos + new Vector3(0.0f, -0.03f, 0.0f);
+
         AudioSource claxon = GetComponentInChildren<AudioSource>();
         claxon.mute = true;
     }

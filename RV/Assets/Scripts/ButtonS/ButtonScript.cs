@@ -59,14 +59,7 @@ public class ButtonScript : MonoBehaviour
 
             if (collision.gameObject.name == hand.name)
             {
-                if (!activated)
-                {
-                    TriggerActivation();
-                }
-                else if (!oneTimePress)
-                {
-                    TriggerDeactivation();
-                }
+                TryPressing();
             }
 
         } else
@@ -76,7 +69,19 @@ public class ButtonScript : MonoBehaviour
 
     }
 
-    public void TriggerActivation()
+    public void TryPressing()
+    {
+        if (!activated)
+        {
+            TriggerActivation();
+        }
+        else if (!oneTimePress)
+        {
+            TriggerDeactivation();
+        }
+    }
+
+    private void TriggerActivation()
     {
         activated = true;
         transform.localPosition = newPos;
@@ -88,7 +93,7 @@ public class ButtonScript : MonoBehaviour
         ActiveAction();
     }
 
-    public void TriggerDeactivation(bool resetTimer = true)
+    private void TriggerDeactivation(bool resetTimer = true)
     {
         activated = false;
         transform.localPosition = originalPos;
