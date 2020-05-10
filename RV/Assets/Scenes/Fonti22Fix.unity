@@ -1022,7 +1022,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 58ac906c32bf02a45b906e13af59eea3, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1121,6 +1121,7 @@ MonoBehaviour:
   Songs:
   - {fileID: 8300000, guid: 58ac906c32bf02a45b906e13af59eea3, type: 3}
   - {fileID: 8300000, guid: 93585f3a273db184393e553898e1aa59, type: 3}
+  - {fileID: 8300000, guid: 43c823276f5ee044a9805e4ff9e52ae8, type: 3}
   currentSong: {fileID: 1875856702}
 --- !u!1 &508868800
 GameObject:
