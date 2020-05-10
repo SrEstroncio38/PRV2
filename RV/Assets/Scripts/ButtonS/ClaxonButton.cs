@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class ClaxonButton : ButtonScript
 {
+    public AudioSource claxon;
+
     public override void ActiveAction()
-    {
-        AudioSource claxon = GetComponentInChildren<AudioSource>();
+    { 
         claxon.Play();
     }
 }
