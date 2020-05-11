@@ -23,8 +23,16 @@ public class MovementButton : ButtonScript
         else if (dir == direccion.Backwards)
             vagoneta.PressBackward();
         else if (dir == direccion.Left)
-            vagoneta.PressLeft();
+            vagoneta.goLeft = true;
         else if (dir == direccion.Right)
-            vagoneta.PressRight();
+            vagoneta.goRight = true;
+    }
+
+    public override void InactiveAction()
+    {
+        if (dir == direccion.Left)
+            vagoneta.goLeft = false;
+        else if (dir == direccion.Right)
+            vagoneta.goRight = false;
     }
 }
