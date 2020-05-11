@@ -1359,6 +1359,8 @@ MonoBehaviour:
   turnSpeed: 35
   maxSpeedForw: 15
   maxSpeedBack: 6
+  waypointIndex: 0
+  direccionMov: 1
   goLeft: 0
   goRight: 0
 --- !u!65 &250010231
@@ -1797,7 +1799,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 81753d558f2f30a448261c5389d6cf7c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -1.36
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 81753d558f2f30a448261c5389d6cf7c,
         type: 3}
@@ -2495,7 +2497,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 447718252}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 68.67, y: 70.1, z: 27.1}
+  m_LocalPosition: {x: 70.36, y: 70.1, z: 27.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 250010233}
@@ -10770,7 +10772,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1926569338}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.7, y: 0, z: -0.13}
+  m_LocalPosition: {x: -0.7, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 854371039}
