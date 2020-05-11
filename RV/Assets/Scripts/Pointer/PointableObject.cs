@@ -5,7 +5,7 @@ using UnityEngine;
 public class PointableObject : MonoBehaviour
 {
 
-    public float waitTime = 3.0f;
+    public float waitTime = 1.5f;
     public bool beingHit = false;
 
     private bool isActive;
@@ -15,13 +15,18 @@ public class PointableObject : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
         currentTime = 0.0f;
         offsetTime = 1.0f;
 
         isActive = false;
         beingHit = false;
-        
+
+        Start2();
+    }
+
+    public virtual void Start2()
+    {
+
     }
 
     // Update is called once per frame
@@ -54,7 +59,7 @@ public class PointableObject : MonoBehaviour
         
     }
 
-    private void PerformAction ()
+    public virtual void PerformAction ()
     {
         Debug.Log("Activado por el rayo");
     }
