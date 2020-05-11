@@ -1535,8 +1535,8 @@ MonoBehaviour:
   leftDirection: -1
   forward: {fileID: 152377844}
   forwardDirection: 1
-  right: {fileID: 0}
-  rightDirection: 1
+  right: {fileID: 496740946}
+  rightDirection: -1
   prevLeft: {fileID: 0}
   prevLeftDirection: 1
   prevForward: {fileID: 712333262}
@@ -6261,7 +6261,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 751013956}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 46.17, y: -11.889999, z: 48.969997}
+  m_LocalPosition: {x: 45.04, y: -10.89, z: 48.73}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 496740947}
@@ -8125,7 +8125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trigger: {fileID: 71399253}
-  restartSpeed: 5
+  restartSpeed: 3
 --- !u!65 &1070848238
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9179,8 +9179,9 @@ MonoBehaviour:
   moveSpeed: 0
   keepSpeed: 0
   signSpeed: 0
+  velocityStep: 3
   turnSpeed: 25
-  maxSpeedForw: 15
+  maxSpeedForw: 9
   maxSpeedBack: 6
   waypointIndex: 0
   direccionMov: 1
@@ -9546,7 +9547,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1257631439}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 23.81, y: 16.02, z: 62.95}
+  m_LocalPosition: {x: 24.66, y: 16.02, z: 62.95}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 496740947}
@@ -10855,7 +10856,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1484774910}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 47.050003, y: -11.889999, z: 48.3}
+  m_LocalPosition: {x: 46.02, y: -11.15, z: 47.97}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 496740947}
@@ -10945,7 +10946,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1527238472}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 23.01, y: 16.02, z: 62.25}
+  m_LocalPosition: {x: 23.61, y: 16.02, z: 62.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 496740947}
@@ -13378,7 +13379,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trigger: {fileID: 71399253}
-  restartSpeed: 5
+  restartSpeed: 3
 --- !u!65 &1841995883
 BoxCollider:
   m_ObjectHideFlags: 0
