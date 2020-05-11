@@ -134,7 +134,7 @@ public class followPath : MonoBehaviour
                 prevLoc = transform.position;
             transform.position = Vector3.MoveTowards(transform.position, waypoints[waypointIndex].transform.position, moveSpeed * Time.deltaTime);
             //transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(transform.position - prevLoc), Time.fixedDeltaTime * 1f);
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(waypoints[waypointIndex].transform.position - prevLoc), turnSpeed * Time.fixedDeltaTime * Mathf.Abs(moveSpeed));
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(waypoints[waypointIndex].transform.position - prevLoc), turnSpeed * Time.deltaTime * Mathf.Abs(moveSpeed));
             if (transform.position == waypoints[waypointIndex].transform.position)
             {
                 waypointIndex += 1;
@@ -232,7 +232,7 @@ public class followPath : MonoBehaviour
 
             transform.position = Vector3.MoveTowards(transform.position, waypoints[waypointIndex - 1].transform.position, Mathf.Abs(moveSpeed) * Time.deltaTime);
             //transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(transform.position - prevLoc), Time.fixedDeltaTime * 1f);
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(prevLoc - waypoints[waypointIndex].transform.position), turnSpeed * Time.fixedDeltaTime * Mathf.Abs(moveSpeed));
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(prevLoc - waypoints[waypointIndex].transform.position), turnSpeed * Time.deltaTime * Mathf.Abs(moveSpeed));
 
             if (transform.position == waypoints[waypointIndex - 1].transform.position)
             {
@@ -332,7 +332,7 @@ public class followPath : MonoBehaviour
 
             transform.position = Vector3.MoveTowards(transform.position, waypoints[waypointIndex - 1].transform.position, Mathf.Abs(moveSpeed) * Time.deltaTime);
             //transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(transform.position - prevLoc), Time.fixedDeltaTime * 1f);
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(waypoints[waypointIndex].transform.position - prevLoc), turnSpeed * Time.fixedDeltaTime * Mathf.Abs(moveSpeed));
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(waypoints[waypointIndex].transform.position - prevLoc), turnSpeed * Time.deltaTime * Mathf.Abs(moveSpeed));
 
             if (transform.position == waypoints[waypointIndex - 1].transform.position)
             {
@@ -441,7 +441,7 @@ public class followPath : MonoBehaviour
                 prevLoc = transform.position;
             transform.position = Vector3.MoveTowards(transform.position, waypoints[waypointIndex].transform.position, Mathf.Abs(moveSpeed) * Time.deltaTime);
             //transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(transform.position - prevLoc), Time.fixedDeltaTime * 1f);
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(prevLoc - waypoints[waypointIndex].transform.position), turnSpeed * Time.fixedDeltaTime * Mathf.Abs(moveSpeed));
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(prevLoc - waypoints[waypointIndex].transform.position), turnSpeed * Time.deltaTime * Mathf.Abs(moveSpeed));
             
             if (transform.position == waypoints[waypointIndex].transform.position)
             {
