@@ -15,6 +15,12 @@ public class followPath : MonoBehaviour
 
     [SerializeField]
     private float moveSpeed = 0f;
+    [SerializeField]
+    private float turnSpeed = 0f;
+    [SerializeField]
+    private float maxSpeedForw = 0f;
+    [SerializeField]
+    private float maxSpeedBack = 0f;
 
     private int waypointIndex = 0;
     public bool goLeft = false;
@@ -70,13 +76,13 @@ public class followPath : MonoBehaviour
     public void PressForward()
     {
         moveSpeed += 1;
-        if (moveSpeed > 3) moveSpeed = 3;
+        if (moveSpeed > maxSpeedForw) moveSpeed = maxSpeedForw;
     }
 
     public void PressBackward()
     {
         moveSpeed -= 1;
-        if (moveSpeed < -2) moveSpeed = -2;
+        if (moveSpeed < -maxSpeedBack) moveSpeed = -maxSpeedBack;
     }
 
     public void PressLeft()
@@ -115,7 +121,7 @@ public class followPath : MonoBehaviour
                 prevLoc = transform.position;
             transform.position = Vector3.MoveTowards(transform.position, waypoints[waypointIndex].transform.position, moveSpeed * Time.deltaTime);
             //transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(transform.position - prevLoc), Time.fixedDeltaTime * 1f);
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(waypoints[waypointIndex].transform.position - prevLoc), 20 * Time.deltaTime * Mathf.Abs(moveSpeed));
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(waypoints[waypointIndex].transform.position - prevLoc), turnSpeed * Time.fixedDeltaTime * Mathf.Abs(moveSpeed));
             if (transform.position == waypoints[waypointIndex].transform.position)
             {
                 waypointIndex += 1;
@@ -143,6 +149,10 @@ public class followPath : MonoBehaviour
                 {
                     ruta = pathLeft;
                 }
+                else
+                {
+                    ruta = pathForward;
+                }
             }
 
             // Si no tengo camino a la izquierda y lo tengo seleccionado
@@ -151,6 +161,10 @@ public class followPath : MonoBehaviour
                 if (pathForward == null)
                 {
                     ruta = pathRight;
+                }
+                else
+                {
+                    ruta = pathForward;
                 }
             }
 
@@ -183,7 +197,7 @@ public class followPath : MonoBehaviour
 
             transform.position = Vector3.MoveTowards(transform.position, waypoints[waypointIndex-1].transform.position, Mathf.Abs(moveSpeed) * Time.deltaTime);
             //transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(transform.position - prevLoc), Time.fixedDeltaTime * 1f);
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(waypoints[waypointIndex].transform.position - prevLoc), 20 * Time.deltaTime * Mathf.Abs(moveSpeed));
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(waypoints[waypointIndex].transform.position - prevLoc), turnSpeed * Time.fixedDeltaTime * Mathf.Abs(moveSpeed));
 
             if (transform.position == waypoints[waypointIndex-1].transform.position)
             {
