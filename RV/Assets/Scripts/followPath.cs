@@ -15,7 +15,9 @@ public class followPath : MonoBehaviour
     private pathsParts pathPrevRight;
 
     [SerializeField]
-    private float moveSpeed = 0f;
+    public float moveSpeed = 0f;
+    public float keepSpeed = 0f;
+    public float signSpeed = 0f;
     [SerializeField]
     private float turnSpeed = 0f;
     [SerializeField]
@@ -68,6 +70,8 @@ public class followPath : MonoBehaviour
             PressRight();
         }
         */
+
+        if (keepSpeed != 0) moveSpeed = keepSpeed;
 
         if (moveSpeed > 0)
         {
