@@ -22,6 +22,15 @@ public class RadioScript : MonoBehaviour
         currentSong.text = "<#ffffff>" + str[0] + "</color> - " + "<#40a0ff>" + str[1] + "</color>";
     }
 
+    public void Update()
+    {
+        AudioSource radio = GetComponent<AudioSource>();
+        if (!radio.isPlaying)
+        {
+            Next();
+        }
+    }
+
 
     public void Next()
     {
