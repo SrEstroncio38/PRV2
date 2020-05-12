@@ -5,7 +5,6 @@ using UnityEngine;
 public class SoundsTrigger : MonoBehaviour
 {
     public List<AudioSource> Audios;
-    public List<AudioSource> AudiosToActive;
     public GameObject trigger;
 
     public void OnTriggerEnter(Collider collision)

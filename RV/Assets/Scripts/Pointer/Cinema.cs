@@ -24,15 +24,18 @@ public class Cinema : PointableObject
         public AudioClip rightAudio;
     }
 
-    public override void Start2()
+
+
+    public override void Start()
     {
+        base.Start();
         movieIdx = UnityEngine.Random.Range(0, movieList.Count);
         if (movieIdx >= movieList.Count)
             movieIdx -= movieList.Count;
 
         screen.loopPointReached += VideoOver;
 
-        SetMovie(movieIdx);
+        //SetMovie(movieIdx);
     }
 
     private void VideoOver(VideoPlayer vp)
@@ -83,6 +86,13 @@ public class Cinema : PointableObject
         screen.Play();
         leftSpeaker.Play();
         rightSpeaker.Play();
+    }
+
+    public void StopVideos()
+    {
+        screen.Stop();
+        leftSpeaker.Stop();
+        rightSpeaker.Stop();
     }
 
 }

@@ -17,6 +17,8 @@ public class PointerScript : MonoBehaviour
         myLine.AddComponent<LineRenderer>();
     }
 
+    
+
     private void OnDestroy()
     {
         GameObject.Destroy(myLine);

@@ -13,7 +13,7 @@ public class PointableObject : MonoBehaviour
     private float offsetTime;
 
     // Start is called before the first frame update
-    void Start()
+    public virtual void Start()
     {
         currentTime = 0.0f;
         offsetTime = 1.0f;
@@ -21,13 +21,8 @@ public class PointableObject : MonoBehaviour
         isActive = false;
         beingHit = false;
 
-        Start2();
     }
 
-    public virtual void Start2()
-    {
-
-    }
 
     // Update is called once per frame
     void Update()
