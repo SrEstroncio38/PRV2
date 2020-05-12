@@ -54,6 +54,11 @@ public class PointableObject : MonoBehaviour
         
     }
 
+    private void OnMouseDown()
+    {
+        PerformAction();
+    }
+
     public virtual void PerformAction ()
     {
         Debug.Log("Activado por el rayo");
