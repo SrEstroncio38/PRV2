@@ -34,7 +34,7 @@ public class RadioScript : MonoBehaviour
 
     public void Next()
     {
-        Debug.Log("Siguiente cancion");
+        //Debug.Log("Siguiente cancion");
         AudioSource radio = GetComponent<AudioSource>();
         radio.Stop();
         radio.clip = Songs[nextSong];
@@ -52,7 +52,7 @@ public class RadioScript : MonoBehaviour
 
     public void Before()
     {
-        Debug.Log("Anterior cancion");
+        //Debug.Log("Anterior cancion");
         AudioSource radio = GetComponent<AudioSource>();
         radio.Stop();
         currentS--;
@@ -70,7 +70,7 @@ public class RadioScript : MonoBehaviour
 
     public void Mute()
     {
-        Debug.Log("Muteando");
+        //Debug.Log("Muteando");
         AudioSource radio = GetComponent<AudioSource>();
         if(radio.mute)
         {

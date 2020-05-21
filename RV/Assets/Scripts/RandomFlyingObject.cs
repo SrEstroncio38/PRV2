@@ -13,6 +13,7 @@ public class RandomFlyingObject : MonoBehaviour
     public float volume = 1;
     public float minWaitTime = 5.0f;
     public float maxWaitTime = 20.0f;
+    public bool muted = true;
 
     private AudioSource audioSource;
     private float waitTime;
@@ -42,7 +43,11 @@ public class RandomFlyingObject : MonoBehaviour
             audioSource.Stop();
             audioSource.time = 0;
             audioSource.volume = volume;
-            audioSource.Play();
+            if (!muted)
+            {
+                audioSource.Play();
+            }
+            
         }
     }
 

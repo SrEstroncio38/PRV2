@@ -8,7 +8,7 @@ public class ForestTrigger : SoundsTrigger
     {
         foreach (AudioSource a in Audios)
         {
-            Debug.Log("Cambiando Sonido de: " + a.clip.name);
+            //Debug.Log("Cambiando Sonido de: " + a.clip.name);
             if (a.mute == true)
             {
                 a.mute = false;
